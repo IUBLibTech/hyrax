@@ -8,6 +8,8 @@ module Hyrax
       #
       # @since 2.2.4
       class SetUploadedDate
+        include Dry::Transaction::Operation
+
         ##
         # @note the current implementation sets the uploaded date to
         #   `#date_modified` if it exists, falling back on the current datetime.
